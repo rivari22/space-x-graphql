@@ -1,0 +1,8 @@
+query GetUsers {
+  users(where: {name: {_eq: "rivari-tech-sharing"}}) {
+    id
+    name
+    rocket
+    twitter
+  }
+}

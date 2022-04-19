@@ -1,0 +1,10 @@
+mutation InsertUserMutation($id: uuid, $name: String, $rocket: String, $timestamp: timestamptz, $twitter: String) {
+  insert_users(objects: {id: $id, name: $name, rocket: $rocket, timestamp: $timestamp, twitter: $twitter}) {
+    affected_rows
+    returning {
+      id
+      name
+      rocket
+    }
+  }
+}
